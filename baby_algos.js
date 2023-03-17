@@ -150,4 +150,13 @@ function findShort(s) {
     return lengths[0]
 }
 
-console.log(findShort("Let's travel abroad shall we"));
+// console.log(findShort("Let's travel abroad shall we"));
+
+//7. Sum of two lowest positive integers
+function sumTwoSmallestNumbers(numbers) {
+    let givenNums = numbers;
+    let sortedNums = givenNums.sort((a, b) => (a - b))
+    return sortedNums[0] + sortedNums[1]
+}
+
+console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]))

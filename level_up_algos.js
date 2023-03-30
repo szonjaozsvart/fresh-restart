@@ -36,5 +36,27 @@ function digitalRoot(n) {
     return sum
 }
 
-console.log(digitalRoot(16)) //7
-console.log(digitalRoot(456)) //6
+// console.log(digitalRoot(16)) //7
+// console.log(digitalRoot(456)) //6
+
+//4. Stop gninnipS My sdroW!
+
+function spinWords(string){
+let words = string;
+let splitted2 = words.split(' ');
+let collector = [];
+for (let i = 0; i < splitted2.length; i++) {
+    if(splitted2[i].length>4) {
+        splitted2[i] = splitted2[i].split('').reverse().join('')
+        collector.push(splitted2[i])
+    } else {
+        collector.push(splitted2[i])
+    }
+    
+}
+return collector.join(' ')
+}
+
+//console.log(spinWords("Welcome")); // "emocleW"
+console.log(spinWords("Hey fellow warriors"),"Hey wollef sroirraw");
+console.log(spinWords("This is a test"), "This is a test");

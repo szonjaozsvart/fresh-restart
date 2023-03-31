@@ -30,8 +30,8 @@ function digitalRoot(n) {
     }
     if (splitted.length > 1) {
         return digitalRoot(sum) // If the splitted has more than one digit, recursively call the digitalRoot 
-                                // function with sum as the argument and return its result. This will 
-                                // continue the process of summing the digits until a single-digit number is produced.
+        // function with sum as the argument and return its result. This will 
+        // continue the process of summing the digits until a single-digit number is produced.
     }
     return sum
 }
@@ -41,22 +41,39 @@ function digitalRoot(n) {
 
 //4. Stop gninnipS My sdroW!
 
-function spinWords(string){
-let words = string;
-let splitted2 = words.split(' ');
-let collector = [];
-for (let i = 0; i < splitted2.length; i++) {
-    if(splitted2[i].length>4) {
-        splitted2[i] = splitted2[i].split('').reverse().join('')
-        collector.push(splitted2[i])
-    } else {
-        collector.push(splitted2[i])
+function spinWords(string) {
+    let words = string;
+    let splitted2 = words.split(' ');
+    let collector = [];
+    for (let i = 0; i < splitted2.length; i++) {
+        if (splitted2[i].length > 4) {
+            splitted2[i] = splitted2[i].split('').reverse().join('')
+            collector.push(splitted2[i])
+        } else {
+            collector.push(splitted2[i])
+        }
+
     }
-    
-}
-return collector.join(' ')
+    return collector.join(' ')
 }
 
 //console.log(spinWords("Welcome")); // "emocleW"
-console.log(spinWords("Hey fellow warriors"),"Hey wollef sroirraw");
-console.log(spinWords("This is a test"), "This is a test");
+// console.log(spinWords("Hey fellow warriors"),"Hey wollef sroirraw");
+// console.log(spinWords("This is a test"), "This is a test");
+
+// 5. Even or Odd
+
+function evenOrOdd(number) {
+    let givenNumber2 = number;
+    let translate = givenNumber2.toString().split('');
+    if (Number(translate[translate.length - 1]) % 2 !== 0) {
+        return "Odd"
+    } else {
+        return "Even"
+    }
+}
+
+console.log(evenOrOdd(3))
+console.log(evenOrOdd(-246))
+console.log(evenOrOdd(31))
+console.log(evenOrOdd(882345679))
